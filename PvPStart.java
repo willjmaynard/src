@@ -60,7 +60,7 @@ public class PvPStart extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.getText();
-				PvP open = new PvP();
+				PvP open = new PvP("Hello");
 				open.show();
 				dispose();
 				

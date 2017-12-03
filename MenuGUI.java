@@ -74,7 +74,7 @@ public class MenuGUI {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				frame.
+				
 			}
 		});
 		btnNewButton_2.setBounds(6, 144, 162, 46);
