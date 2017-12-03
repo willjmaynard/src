@@ -9,12 +9,12 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class PvPStart extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -47,36 +47,30 @@ public class PvPStart extends JFrame {
 		lblYouHaveSelected.setBounds(143, 6, 161, 16);
 		contentPane.add(lblYouHaveSelected);
 		
-		JLabel lblNewLabel = new JLabel("Please input number of players");
-		lblNewLabel.setBounds(6, 52, 211, 35);
-		contentPane.add(lblNewLabel);
-		
-		textField = new JTextField();
-		textField.setBounds(240, 52, 150, 35);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
 		JButton btnNewButton = new JButton("GO!");
+		btnNewButton.setBounds(143, 169, 161, 29);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField.getText();
-				PvP open = new PvP("Hello");
-				open.show();
-				dispose();
-				
+				PvP open;
+                                open = new PvP(); // TODO Auto-generated catch block
+                                open.show();
+                                dispose();
 				
 			}
 		});
-		btnNewButton.setBounds(143, 169, 161, 29);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("EXIT");
+		btnNewButton_1.setBounds(143, 210, 161, 29);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 			}
 		});
-		btnNewButton_1.setBounds(143, 210, 161, 29);
 		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("This is a two Player Game!");
+		lblNewLabel_1.setBounds(135, 34, 211, 35);
+		contentPane.add(lblNewLabel_1);
 	}
 }

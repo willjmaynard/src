@@ -5,6 +5,7 @@ import java.awt.Label;
 import java.awt.BorderLayout;
 import java.awt.Button;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -41,7 +42,7 @@ public class MenuGUI {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 600, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -54,6 +55,7 @@ public class MenuGUI {
 			public void actionPerformed(ActionEvent e) {
 				PvPStart one= new PvPStart();
 				one.show();
+				frame.dispose();
 			}
 		});
 		btnNewButton.setBounds(6, 28, 162, 46);
@@ -64,6 +66,7 @@ public class MenuGUI {
 			public void actionPerformed(ActionEvent e) {
 				PvCStart one=new PvCStart();
 				one.show();
+				frame.dispose();
 				
 			}
 		});
@@ -79,5 +82,17 @@ public class MenuGUI {
 		});
 		btnNewButton_2.setBounds(6, 144, 162, 46);
 		frame.getContentPane().add(btnNewButton_2);
+		
+		ImageIcon images = new ImageIcon("images/meme.png");
+		JLabel lblNewLabel = new JLabel("meme.png", images, JLabel.CENTER);
+		lblNewLabel.setBounds(190, 34, 400, 400);
+		frame.getContentPane().add(lblNewLabel);
+		
+		
+		
 	}
+        
+        public JFrame getFrame(){
+            return frame;
+        }
 }
